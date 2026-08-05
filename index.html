@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DWT prototypes &amp; working drafts</title>
+<style>
+  :root { --ink:#0b0c0c; --muted:#505a5f; --line:#b1b4b6; --blue:#1d70b8; }
+  html,body { margin:0; background:#f3f2f1; color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.5; }
+  .topbar { background:#0b0c0c; color:#fff; padding:14px 0; }
+  .topbar .inner { max-width:960px; margin:0 auto; padding:0 24px; font-weight:700; letter-spacing:.5px; }
+  .wrap { max-width:960px; margin:0 auto; padding:32px 24px 56px; }
+  h1 { font-size:30px; margin:0 0 8px; }
+  .lede { font-size:17px; color:var(--muted); max-width:640px; margin-bottom:8px; }
+  .note { font-size:14px; color:var(--muted); border-left:4px solid var(--line); padding:6px 0 6px 14px; margin:18px 0 30px; max-width:640px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:18px; }
+  a.card { display:block; background:#fff; border:1px solid var(--line); border-radius:6px;
+    padding:20px 22px; text-decoration:none; color:var(--ink); transition:box-shadow .15s, transform .15s; }
+  a.card:hover { box-shadow:0 4px 14px rgba(0,0,0,.10); transform:translateY(-2px); }
+  .card h2 { font-size:18px; margin:0 0 6px; color:var(--blue); }
+  .card p { font-size:14px; margin:0 0 12px; color:var(--ink); }
+  .chips span { display:inline-block; font-size:11px; font-weight:700; letter-spacing:.8px;
+    padding:2px 9px; border-radius:3px; margin-right:6px; }
+  .chip-draft { background:#f47738; color:#fff; }
+  .chip-lock  { background:#0b0c0c; color:#fff; }
+  .chip-open  { background:#00703c; color:#fff; }
+  .chip-date  { background:#f3f2f1; color:var(--muted); border:1px solid var(--line); }
+  footer { margin-top:40px; font-size:13px; color:var(--muted); }
+</style></head><body>
+<div class="topbar"><div class="inner">Digital Waste Tracking — prototypes</div></div>
+<div class="wrap">
+  <h1>Prototypes &amp; working drafts</h1>
+  <p class="lede">Working material for the Digital Waste Tracking programme. Everything here is a draft for discussion, not a published position.</p>
+  <p class="note">Items marked <b>password required</b> are encrypted — the page asks for a password before showing anything, and the password is shared separately. If you need it, contact Naveed.</p>
+
+  <div class="grid">
+    <!-- ============ ADD NEW PROTOTYPE CARDS BELOW: copy a card, edit title/text/link/chips ============ -->
+
+    <a class="card" href="spider/">
+      <h2>Ecosystem map — the spider moment</h2>
+      <p>Interactive map of everything the service touches: five branches, 22 organisations, 69+ dependencies, 7 grey areas.</p>
+      <div class="chips">
+        <span class="chip-draft">EXPLORATORY DRAFT</span>
+        <span class="chip-lock">PASSWORD REQUIRED</span>
+        <span class="chip-date">v0.2 · Aug 2026</span>
+      </div>
+    </a>
+
+    <!-- ============ END OF CARDS ============ -->
+  </div>
+
+  <footer>Working drafts, shared by invitation. Nothing on this site is a published programme position.</footer>
+</div>
+</body></html>
