@@ -16,7 +16,6 @@ Keep that separation strict: nothing unencrypted and sensitive ever gets committ
 ```
 index.html        ← landing page listing all prototypes (public, deliberately bland)
 spider/index.html ← encrypted: ecosystem map (the spider moment)
-encrypt.sh        ← helper that encrypts any prototype the same way
 ```
 
 ## Publishing a new prototype
