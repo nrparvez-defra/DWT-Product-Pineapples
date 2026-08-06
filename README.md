@@ -21,14 +21,39 @@ encrypt.sh        ← helper that encrypts any prototype the same way
 
 ## Publishing a new prototype
 
+## Publishing a new prototype
+
 1. Build the prototype in its own **private** source repo.
-2. From this repo's root, encrypt it into a new folder:
-   ```bash
-   ./encrypt.sh path/to/prototype.html <folder-name> "<password>"
-   ```
+2. Save the script below locally as `encrypt.sh` (not committed to this repo — it's just the recipe), then run it from this repo's root:
+```bash
+   #!/usr/bin/env bash
+   # Encrypt a prototype HTML page for publishing on the public prototypes site.
+   #
+   # Usage:
+   #   ./encrypt.sh <input.html> <output-folder> <your-chosen-passphrase>
+   # Example:
+   #   ./encrypt.sh ../dwt-spider-source/index.html spider yourpassphrasehere
+   #
+   # Requires Node.js. First run will fetch staticrypt automatically via npx.
+
+   set -euo pipefail
+
+   if [ $# -ne 3 ]; then
+     echo "Usage: ./encrypt.sh <input.html> <output-folder> <passphrase>" >&2
+     exit 1
+   fi
+
+   npx staticrypt "$1" -d "$2" -p "$3" \
+     --remember 7 \
+     --template-title "DWT working draft - access required" \
+     --template-instructions "This is a protected working draft for the Digital Waste Tracking programme. The passphrase is shared separately - if you don't have it, contact Naveed." \
+     --template-button "Unlock"
+
+   echo "Encrypted -> $2/index.html (safe to commit to the public repo)"
+```
 3. Add a card for it to `index.html` (copy an existing card in the marked block; set the title, one-line description, link and chips).
-4. Commit and push. Pages updates in a minute or two.
-5. Share the URL and the password **in separate messages/channels**.
+4. Commit and push the new prototype folder. Pages updates in a minute or two.
+5. Share the URL and the passphrase **in separate messages/channels**.
 
 ## Passwords
 
