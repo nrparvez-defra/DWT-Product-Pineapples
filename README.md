@@ -21,8 +21,6 @@ encrypt.sh        ← helper that encrypts any prototype the same way
 
 ## Publishing a new prototype
 
-## Publishing a new prototype
-
 1. Build the prototype in its own **private** source repo.
 2. Save the script below locally as `encrypt.sh` (not committed to this repo — it's just the recipe), then run it from this repo's root:
 ```bash
